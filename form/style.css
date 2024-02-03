@@ -1,16 +1,23 @@
 /* Default styles for desktop */
 body {
-  background: url("assets/background.jpg") no-repeat center center fixed;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat; 
   background-size: cover;
 }
 
 /* Media query for mobile and tablet responsiveness */
-@media only screen and (max-width: 360px) {
+@media (max-width: 480px) {
   body {
-    background: url('assets/background_m.jpg') center/cover no-repeat; /* Responsive background for mobile and tablet */
+    background: url('assets/background_m.jpg'); /* Responsive background for mobile and tablet */
   }
 }
 
+@media (min-width: 481px) {
+  body {
+      background-image: url('assets/background.jpg');  /* PC background */
+  }
+}
 
 /* General Styles */
 .form-style {
