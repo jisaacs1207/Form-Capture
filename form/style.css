@@ -2,20 +2,22 @@
 body {
   background-position: center center;
   background-attachment: fixed;
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
 /* Media query for mobile and tablet responsiveness */
 @media (max-width: 480px) {
   body {
-    background: url('assets/background_m.jpg'); /* Responsive background for mobile and tablet */
+    background: url('assets/background_m.jpg');
+    /* Responsive background for mobile and tablet */
   }
 }
 
 @media (min-width: 481px) {
   body {
-      background-image: url('assets/background.jpg');  /* PC background */
+    background-image: url('assets/background.jpg');
+    /* PC background */
   }
 }
 
