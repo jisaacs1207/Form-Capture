@@ -207,34 +207,7 @@
         </div>
     </div>
 
-    <script>
-        let currentPage = 1;
-        const pages = document.querySelectorAll('.page');
-        const submitContainer = document.querySelector('.submit-container');
-
-        function changePage(step) {
-            // Hide the current page
-            pages[currentPage - 1].style.display = 'none';
-
-            // Update the current page
-            currentPage += step;
-
-            // Show the new current page
-            pages[currentPage - 1].style.display = 'block';
-
-            // Update button visibility
-            updateButtonVisibility();
-        }
-
-        function updateButtonVisibility() {
-            const backBtn = document.querySelector('.navigation-buttons button:first-child');
-            const nextBtn = document.querySelector('.navigation-buttons button:last-child');
-
-            backBtn.style.display = currentPage === 1 ? 'none' : 'inline-block';
-            nextBtn.style.display = currentPage < pages.length ? 'inline-block' : 'none';
-            submitContainer.style.display = currentPage === pages.length ? 'flex' : 'none';
-        }
-    </script>
+    <script src="app/form.js"></script>
 </body>
 
 </html>
