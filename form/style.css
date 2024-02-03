@@ -1,3 +1,17 @@
+/* Default styles for desktop */
+body {
+  background: url("assets/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Media query for mobile and tablet responsiveness */
+@media only screen and (max-width: 360px) {
+  body {
+    background: url('assets/background_m.jpg') center/cover no-repeat; /* Responsive background for mobile and tablet */
+  }
+}
+
+
 /* General Styles */
 .form-style {
   max-width: 800px;
