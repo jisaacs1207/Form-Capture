@@ -1,185 +1,123 @@
-.form-style-5 {
-    max-width: 800px;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.7);
-    margin: 100px auto 0; /* Center the form horizontally */
-    position: relative;
-    top: 60px; /* Adjust the top position to start the form from a little lower */
-    border-radius: 8px;
-    font-family: Georgia, "Times New Roman", Times, serif;
-    border: 0; /* Add this line to remove the border */
-    box-shadow: 0 0 0 0; /* Add this line to remove box-shadow */
+.form-style {
+  max-width: 800px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  margin: 100px auto 60px; /* Center the form horizontally and adjust top position */
+  border-radius: 8px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  box-shadow: none; /* Remove box-shadow */
+}
+
+.form-style label.required::after {
+  content: "*";
+  color: red;
+  margin-right: 2px;
+}
+
+.required-message {
+  margin-top: 6px;
+  font-weight: normal;
+  color: red;
+  text-align: right;
+  font-style: italic;
+}
+
+.form-style label {
+  margin-bottom: 8px;
+  color: #05365B;
+  font-family: 'Metrophobic', sans-serif;
+}
+
+.form-style textarea,
+.form-style select,
+.form-style input[type="text"] {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  margin: 0;
+  outline: 0;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #e8eeef;
+  color: #05365B;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+  margin-bottom: 30px;
+}
+
+.form-style textarea:focus,
+.form-style select:focus,
+.form-style input[type="text"]:focus {
+  background: #d2d9dd;
+}
+
+.form-style select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  height: 35px;
+  padding: 10px;
+  font-size: 15px;
+  border: none;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #e8eeef;
+  color: #05365B;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+  margin-bottom: 30px;
+}
+
+.form-style select:focus {
+  background: #d2d9dd;
+}
+
+.form-style .number {
+  background: #05365B;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-right: 4px;
+  line-height: 30px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-radius: 15px 15px 15px 0px;
+}
+
+.form-style input[type="submit"] {
+  position: relative;
+  display: block;
+  padding: 15px 20px;
+  color: #FFF;
+  margin: 0 auto;
+  background: #05365B;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  font-style: normal;
+  width: 100%;
+  border: 1px solid #05365B;
+  border-width: 1px 1px 3px;
+  margin-bottom: 10px;
+}
+
+.form-style input[type="submit"]:hover {
+  background: #05365B;
+}
+
+/* Media query for mobile responsiveness */
+@media only screen and (max-width: 600px) {
+  .form-style {
+    margin: 50px auto 30px;
   }
-  
-  .form-style-5 label.required::after {
-    content: "*";
-    color: red;
-    margin-right: 2px;
-  }
-  
-  .required-message {
-    margin-top: 6px; /* Adjust margin as needed */
-    font-weight: normal; /* Remove the bold property */
-    color: red;
-    text-align: right;
-    font-style: italic !important; /* Ensure the italic style is applied */
-  }
-  
-  .form-style-5 label {
-    margin-bottom: 8px;
-    color: #05365B;
-    font-family: 'Metrophobic', sans-serif;
-  }
-  
-  .form-style-5 textarea {
-    font-family: Georgia, "Times New Roman", Times, serif;
-    background: rgba(255, 255, 255, 0.1);
-    border: none;
-    border-radius: 4px;
-    font-size: 15px;
-    margin: 0;
-    outline: 0;
-    padding: 10px;
+
+  .form-style input[type="submit"],
+  .form-style .number {
     width: 100%;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    background-color: #e8eeef;
-    color: #05365B;
-    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
-    margin-bottom: 30px;
   }
-  
-  .form-style-5 select {
-    font-family: Georgia, "Times New Roman", Times, serif;
-    background: rgba(255, 255, 255, 0.1);
-    border: none;
-    border-radius: 4px;
-    font-size: 15px;
-    margin: 0;
-    outline: 0;
-    padding: 10px;
-    width: 100%;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    background-color: #e8eeef;
-    color: #05365B;
-    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
-    margin-bottom: 30px;
-  }
-  
-  .form-style-5 fieldset legend {
-      
-    font-family: 'Open Sans', sans-serif;
-    color: #05365B;
-  }
-  
-  .form-style-5 * {
-    border: none !important;
-    box-shadow: none !important;
-  }
-  
-  .form-style-5 input[type="checkbox"] {
-    transform: scale(1.5); /* Adjust the scale factor as needed */
-  }
-  
-  
-  .form-style-5 .subline {
-    font-size: 13px; /* Adjust the size as needed */
-    font-style: italic;
-    color: #666; /* You can adjust the color to fit your design */
-    margin-bottom: 8px;
-    display: block;
-  }
-  
-  
-  .form-style-5 .column {
-    width: 48%;
-    float: left;
-    margin-right: 2%;
-  }
-  
-  .form-style-5 fieldset legend {
-    font-size: 1.4em;
-    margin-bottom: 10px;
-    text-align: center;
-  }
-  
-  .form-style-5 label {
-    display: block;
-    margin-bottom: 8px;
-    color: #05365B;
-    font-family: 'Metrophobic', sans-serif;
-  }
-  
-  .form-style-5 input[type="text"],
-  
-  .form-style-5 select {
-    font-family: Georgia, "Times New Roman", Times, serif;
-    background: rgba(255, 255, 255, 0.1);
-    border: none;
-    border-radius: 4px;
-    font-size: 15px;
-    margin: 0;
-    outline: 0;
-    padding: 10px;
-    width: 100%;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    background-color: #e8eeef;
-    color: #05365B;
-    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
-    margin-bottom: 30px;
-  }
-  
-  .form-style-5 input[type="text"]:focus,
-  .form-style-5 textarea:focus,
-  .form-style-5 select:focus {
-    background: #d2d9dd;
-  }
-  
-  .form-style-5 select {
-    -webkit-appearance: menulist-button;
-    height: 35px;
-  }
-  
-  .form-style-5 .number {
-    background: #05365B;
-    color: #fff;
-    height: 30px;
-    width: 30px;
-    display: inline-block;
-    font-size: 0.8em;
-    margin-right: 4px;
-    line-height: 30px;
-    text-align: center;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
-    border-radius: 15px 15px 15px 0px;
-  }
-  
-  .form-style-5 input[type="submit"] {
-    position: relative;
-    display: block;
-    padding: 15px 20px 15px 20px;
-    color: #FFF;
-    margin: 0 auto;
-    background: #05365B;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    font-style: normal;
-    width: 100%;
-    border: 1px solid #05365B;
-    border-width: 1px 1px 3px;
-    margin-bottom: 10px;
-  }
-  
-  .form-style-5 input[type="submit"]:hover {
-    background: #05365B;
-  }
-  
+}
