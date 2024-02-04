@@ -121,7 +121,8 @@ body {
 }
 
 /* Submit Button Styling */
-.form-style input[type="submit"] {
+.form-style button[type="button"],
+.form-style button[type="submit"] {
   position: relative;
   display: block;
   padding: 15px 20px;
@@ -139,7 +140,8 @@ body {
 }
 
 /* Hover Styles for Submit Button */
-.form-style input[type="submit"]:hover {
+.form-style button[type="button"]:hover,
+.form-style button[type="submit"]:hover {
   background: #05365B;
 }
 
@@ -149,7 +151,8 @@ body {
     margin: 50px auto 30px;
   }
 
-  .form-style input[type="submit"],
+  .form-style button[type="button"],
+  .form-style button[type="submit"],
   .form-style .number {
     width: 100%;
   }
