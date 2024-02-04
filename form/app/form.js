@@ -1,3 +1,7 @@
+// I've had to temporarily add a hacky fix for a duplicate alert bug.
+// changePage is disabled for 1 second after the page is changed.
+// I hate to do this but I've spent too much time debugging.
+
 let currentPage = 1;
 let isChangePageEnabled = true;  // Flag to track if the changePage function is enabled
 const pages = document.querySelectorAll('.page');
