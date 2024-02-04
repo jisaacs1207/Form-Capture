@@ -52,7 +52,7 @@ function updateButtonVisibility() {
 document.querySelector('.navigation-buttons button:last-child').addEventListener('click', () => {
     if (currentPage < pages.length) {
         // Check validation only when moving to the next page
-        if (!validatePage(currentPage)) {
+        if (!validateInputs(pages[currentPage - 1].querySelectorAll('[required]'))) {
             alert('Please fill in all required fields before proceeding.');
             return;
         }
@@ -63,7 +63,7 @@ document.querySelector('.navigation-buttons button:last-child').addEventListener
 
 // Add event listener for "Submit" button clicks
 document.querySelector('.submit-container button[type="submit"]').addEventListener('click', () => {
-    if (validatePage(currentPage)) {
+    if (validateInputs(pages[currentPage - 1].querySelectorAll('[required]'))) {
         // If the current page is valid, submit the form
         document.querySelector('form').submit();
     } else {
