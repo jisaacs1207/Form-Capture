@@ -1,10 +1,15 @@
 let currentPage = 1;
+let isChangePageEnabled = true;  // Flag to track if the changePage function is enabled
 const pages = document.querySelectorAll('.page');
 const submitContainer = document.querySelector('.submit-container');
+const nextBtn = document.querySelector('.navigation-buttons button:last-child');
 
 function changePage(step) {
+    if (!isChangePageEnabled) {
+        return;  // If the changePage function is disabled, do nothing
+    }
+
     const currentPageInputs = pages[currentPage - 1].querySelectorAll('[required]');
-    
     if (step === 1 && !validateInputs(currentPageInputs)) {
         alert('Please fill in all required fields before proceeding.');
         return;
@@ -49,15 +54,11 @@ function updateButtonVisibility() {
 }
 
 // Add event listener for "Next" button clicks
-document.querySelector('.navigation-buttons button:last-child').addEventListener('click', () => {
-    if (currentPage < pages.length) {
-        // Check validation only when moving to the next page
-        if (!validateInputs(pages[currentPage - 1].querySelectorAll('[required]'))) {
-            alert('Please fill in all required fields before proceeding.');
-            return;
-        }
-    }
-
+nextBtn.addEventListener('click', () => {
+    isChangePageEnabled = false;  // Disable the changePage function
+    setTimeout(() => {
+        isChangePageEnabled = true;  // Enable the changePage function after 1 second
+    }, 1000);
     changePage(1);
 });
 
@@ -68,6 +69,6 @@ document.querySelector('.submit-container button[type="submit"]').addEventListen
         document.querySelector('form').submit();
     } else {
         // If the current page is not valid, show a warning
-        alert('Please fill in all required fields before submitting.');
+        alert('Please fill in all required fields before proceeding.');
     }
 });
