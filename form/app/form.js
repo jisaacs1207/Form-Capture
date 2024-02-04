@@ -15,5 +15,15 @@ function updateButtonVisibility() {
 
     backBtn.style.display = currentPage === 1 ? 'none' : 'inline-block';
     nextBtn.style.display = currentPage < pages.length ? 'inline-block' : 'none';
+
+    // Update the visibility of the "Back" button in the submit container
+    const submitBackBtn = document.querySelector('.submit-container button[type="button"]');
+    submitBackBtn.style.display = currentPage === pages.length ? 'inline-block' : 'none';
+
     submitContainer.style.display = currentPage === pages.length ? 'flex' : 'none';
+
+    // Hide the regular "Back" button when on the final page
+    if (currentPage === pages.length) {
+        backBtn.style.display = 'none';
+    }
 }
