@@ -1,7 +1,8 @@
-// Mentor Application Form for https://www.urbantechhero.org
-// Developer: Joshua Isaacs
-// Email: jisaacs1207@icloud
-// GitHub: https://github.com/jisaacs1207
+/* Mentor Application Form for https://www.urbantechhero.org
+ Developer: Joshua Isaacs / Kate Garbar
+ Email: jisaacs1207@icloud / kgarbar@gmail.com
+ GitHub: https://github.com/jisaacs1207 / https://github.com/kgarbar
+*/
 
 // Initial setup and configuration
 let currentPage = 1; // Tracks the current page in the form
