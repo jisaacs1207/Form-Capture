@@ -157,3 +157,12 @@ body {
     width: 100%;
   }
 }
+
+/* Submit Button Container Styling */
+.submit-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  width: 100%;
+}
