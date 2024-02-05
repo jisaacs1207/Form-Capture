@@ -39,7 +39,10 @@ function validateInputs(inputs) {
     let isValid = true;
 
     inputs.forEach(input => {
-        if (!input.value.trim()) {
+        if (input.type === 'checkbox' && !input.checked) {
+            isValid = false;
+            input.classList.add('invalid');
+        } else if (!input.value.trim()) {
             isValid = false;
             input.classList.add('invalid');
         } else {
