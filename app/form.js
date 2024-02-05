@@ -7,8 +7,18 @@ let isChangePageEnabled = true;  // Flag to track if the changePage function is 
 const pages = document.querySelectorAll('.page');
 const submitContainer = document.querySelector('.submit-container');
 const nextBtn = document.querySelector('.navigation-buttons button:last-child');
+const backBtn = document.querySelector('.navigation-buttons button:last-child'); // Select the back button
+backBtn.style.display = 'none'; // Initially hide the back button
 
 function changePage(step) {
+    if (currentPage === 1) {
+        const backBtn = document.querySelector('.navigation-buttons button:last-child'); // Select the back button
+        backBtn.style.display = 'none';
+    } else {
+        const backBtn = document.querySelector('.navigation-buttons button:last-child');
+        backBtn.style.display = 'inline-block'; // Make sure it's visible on other pages
+    }
+
     if (!isChangePageEnabled) {
         return;  // If the changePage function is disabled, do nothing
     }
