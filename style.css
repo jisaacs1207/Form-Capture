@@ -18,12 +18,20 @@ body {
     background: url('assets/background_m.jpg');
     /* Responsive background for mobile and tablet */
   }
+
+  .form-style {
+    max-width: 440px;
+  }
 }
 
 @media (min-width: 481px) {
   body {
     background-image: url('assets/background.jpg');
     /* PC background */
+  }
+
+  .form-style {
+    max-width: 500px;
   }
 }
 
