@@ -28,17 +28,16 @@ body {
 }
 
 /* General Styles */
-/* General Styles */
 .form-style {
   max-width: 500px;
   /* Adjusted width */
-  margin: 100px auto 60px;
+  margin: 160px auto 60px;
   padding: 20px;
   border-radius: 8px;
   font-family: 'Georgia', 'Times New Roman', Times, serif;
   background: rgba(255, 255, 255, 0.7);
   /* Slightly transparent background */
-  box-shadow: none;
+  box-shadow: 10px 5px 5px rgb(9, 54, 89);
 }
 
 /* Required Field Styling */
