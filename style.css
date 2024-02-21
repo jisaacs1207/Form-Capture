@@ -16,8 +16,8 @@ body {
 @media (max-width: 480px) {
   body {
     background: url('assets/background_m.jpg');
-    background-size: 100% auto;
-    /* Set background size to cover entire width */
+    background-size: cover;
+    /* Set background size to cover entire container */
     background-position: center bottom;
     /* Pin background to the bottom */
     /* Responsive background for mobile and tablet */
@@ -40,6 +40,8 @@ body {
 @media (min-width: 481px) {
   body {
     background-image: url('assets/background.jpg');
+    background-size: 100% 100%;
+    /* Stretch background both horizontally and vertically */
     /* PC background */
   }
 
