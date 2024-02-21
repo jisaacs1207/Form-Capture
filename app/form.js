@@ -119,18 +119,21 @@ document.querySelector('.submit-container button[type="submit"]').addEventListen
 
 // Wait for the DOM content to be fully loaded
 document.addEventListener("DOMContentLoaded", function() {
-    // Get the logo element
-    var logo = document.querySelector('.logo-image');
-    // Get the form element
-    var form = document.querySelector('.form-style');
-    
-    // If both logo and form elements are found
-    if (logo && form) {
-        // Get the height of the logo
-        var logoHeight = logo.offsetHeight;
-        // Increase the margin by, for example, 20 pixels
-        var increasedMargin = logoHeight + 20; // Adjust as needed
-        // Set the margin-top of the form to the increased margin
-        form.style.marginTop = increasedMargin + 'px';
+    // Check if the screen width is less than or equal to 767 pixels (considered as mobile devices)
+    if (window.innerWidth <= 480) {
+        // Get the logo element
+        var logo = document.querySelector('.logo-image');
+        // Get the form element
+        var form = document.querySelector('.form-style');
+        
+        // If both logo and form elements are found
+        if (logo && form) {
+            // Get the height of the logo
+            var logoHeight = logo.offsetHeight;
+            // Increase the margin by, for example, 20 pixels
+            var increasedMargin = logoHeight + 20; // Adjust as needed
+            // Set the margin-top of the form to the increased margin
+            form.style.marginTop = increasedMargin + 'px';
+        }
     }
 });
