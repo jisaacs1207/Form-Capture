@@ -16,11 +16,25 @@ body {
 @media (max-width: 480px) {
   body {
     background: url('assets/background_m.jpg');
+    background-size: 100% auto;
+    /* Set background size to cover entire width */
+    background-position: center bottom;
+    /* Pin background to the bottom */
     /* Responsive background for mobile and tablet */
   }
 
   .form-style {
     max-width: 440px;
+  }
+
+  /* Styles for the logo */
+  .logo-image {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 300px;
+    z-index: 2;
   }
 }
 
@@ -33,7 +47,14 @@ body {
   .form-style {
     max-width: 500px;
   }
+
+  /* Hide the logo on screens wider than 480px */
+  .logo-image {
+    display: none;
+  }
 }
+
+
 
 /* General Styles */
 .form-style {
