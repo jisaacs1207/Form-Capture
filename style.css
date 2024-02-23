@@ -1,7 +1,8 @@
-/* Mentor Application Form for https://www.urbantechhero.org
- Developer: Joshua Isaacs / Kate Garbar
- Email: jisaacs1207@icloud / kgarbar@gmail.com
- GitHub: https://github.com/jisaacs1207 / https://github.com/kgarbar
+/* 
+   Mentor Application Form for https://www.urbantechhero.org
+   Developer: Joshua Isaacs / Kate Garbar
+   Email: jisaacs1207@icloud / kgarbar@gmail.com
+   GitHub: https://github.com/jisaacs1207 / https://github.com/kgarbar
 */
 
 /* Default styles for desktop */
@@ -39,12 +40,13 @@ body {
   }
 }
 
+/* PC background */
 @media (min-width: 481px) {
   body {
     background-image: url('assets/background.jpg');
     background-size: 100% 100%;
     /* Stretch background both horizontally and vertically */
-    /* PC background */
+
   }
 
   .form-style {
@@ -56,8 +58,6 @@ body {
     display: none;
   }
 }
-
-
 
 /* General Styles */
 .form-style {
