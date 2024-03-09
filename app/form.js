@@ -77,8 +77,8 @@ function validateInputs(inputs) {
  * Function to update the visibility of navigation buttons and submit container.
  */
 function updateButtonVisibility() {
-    const backBtn = document.querySelector('.navigation-buttons button:first-child');
-    const nextBtn = document.querySelector('.navigation-buttons button:last-child');
+    const nextBtn = document.querySelector('.navigation-buttons button:first-child');
+    const backBtn = document.querySelector('.navigation-buttons button:last-child');
 
     // Toggle visibility of back and next buttons based on the current page
     backBtn.style.display = currentPage === 1 ? 'none' : 'inline-block';
